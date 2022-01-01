@@ -1,22 +1,15 @@
 import time
 import datetime
-
 import pyfiglet
 import logging
 import logging.config
 import os
 import telegram
-
 from _model import *
-
-import string
-from random import choice
-
-
+from random import choice, shuffle
+from string import ascii_letters, digits
 from dotenv import load_dotenv, find_dotenv
-
 load_dotenv(find_dotenv())
-
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Poll
 from telegram.ext import (
     Updater,
