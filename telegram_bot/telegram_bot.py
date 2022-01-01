@@ -5,6 +5,12 @@ import pyfiglet
 import logging
 import logging.config
 import os
+import telegram
+
+from _model import *
+
+import string
+from random import choice
 
 
 from dotenv import load_dotenv, find_dotenv
@@ -20,13 +26,8 @@ from telegram.ext import (
     CallbackQueryHandler,
     PollHandler,
 )
-import telegram
 
-from _model import *
 
-import string
-from random import *
-import random
 def generate_random_password():
     characters = list(string.ascii_letters + string.digits + "!@#$%^&*()")
     length = randint(8,16)
